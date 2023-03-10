@@ -1,0 +1,34 @@
+<div class="author-info">
+  <h2>{{ data?.author }}</h2>
+  <p>Birthday: {{ data?.birthday }}</p>
+  <p>Place of birth: {{ data?.birthPlace }}</p>
+</div>
+
+<div *ngIf="editingIndex === null" class="action-buttons">
+  <button (click)="addBook()" mat-raised-button>Add Book</button>
+  <button (click)="sortType = 'title';" mat-raised-button>Sort by Title</button>
+  <button (click)="sortType = 'date';" mat-raised-button>Sort by Date</button>
+</div>
+
+<div *ngIf="editingIndex === null" class="books-list">
+  <div *ngFor="let book of (booksList | sortBooks: sortType); let i = index;" class="book-item">
+    <img [alt]="book?.title" [src]="book?.imageUrl" class="image-size">
+    <h3><a [href]="book?.purchaseLink">{{ book?.title }}</a></h3>
+    <p>Date published: {{ book.PublishDate }}</p>
+    <div class="action-buttons">
+      <button (click)="editBook(i)" mat-raised-button>Edit</button>
+      <button (click)="deleteBook(i)" mat-raised-button>Delete</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="editingIndex !== null" class="edit-book">
+  <h3>Editing the Book</h3>
+  <input [(ngModel)]="editedBook.imageUrl" placeholder="Image URL" type="text">
+  <input [(ngModel)]="editedBook.title" placeholder="Title" type="text">
+  <input [(ngModel)]="editedBook.PublishDate" placeholder="Publish Date" type="text">
+  <input [(ngModel)]="editedBook.purchaseLink" placeholder="Purchase URL" type="text">
+  <div>
+    <button (click)="saveEdit()" mat-raised-button>Save</button>
+    <button (click)="cancelEdit()" mat-raised-button>Cancel</button>
+  </div>
+</div>
