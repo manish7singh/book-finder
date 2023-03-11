@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "books-finder-74eb8"
+  },
+  "targets": {
+    "books-finder-74eb8": {
+      "hosting": {
+        "book-finder": [
+          "books-finder-74eb8"
+        ]
+      }
+    }
   }
 }
