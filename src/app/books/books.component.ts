@@ -36,7 +36,7 @@ export class BooksComponent implements OnInit {
   }
 
   /**
-   * Method to add book to the exiting list
+   * Method to add book to the existing list.
    */
   addBook() {
     const newBook = {

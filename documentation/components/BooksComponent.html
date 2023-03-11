@@ -1,0 +1,1060 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>book-finder documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">book-finder documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  BooksComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/books/books.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">providers</td>
+                <td class="col-md-9">
+                                <code><a href="../interfaces/Book.html" target="_self" >SortBooksPipe</a></code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-books</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./books.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./books.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#booksList" >booksList</a>
+                            </li>
+                            <li>
+                                <a href="#data" >data</a>
+                            </li>
+                            <li>
+                                <a href="#editedBook" >editedBook</a>
+                            </li>
+                            <li>
+                                <a href="#editingIndex" >editingIndex</a>
+                            </li>
+                            <li>
+                                <a href="#sortType" >sortType</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addBook" >addBook</a>
+                            </li>
+                            <li>
+                                <a href="#cancelEdit" >cancelEdit</a>
+                            </li>
+                            <li>
+                                <a href="#deleteBook" >deleteBook</a>
+                            </li>
+                            <li>
+                                <a href="#editBook" >editBook</a>
+                            </li>
+                            <li>
+                                <a href="#getBooksData" >getBooksData</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#saveEdit" >saveEdit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(booksService: <a href="../injectables/BooksService.html" target="_self">BooksService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/books/books.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>booksService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BooksService.html" target="_self" >BooksService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addBook"></a>
+                    <span class="name">
+                        <span ><b>addBook</b></span>
+                        <a href="#addBook"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addBook()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/books/books.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to add book to the existing list.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelEdit"></a>
+                    <span class="name">
+                        <span ><b>cancelEdit</b></span>
+                        <a href="#cancelEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelEdit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/books/books.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to cancel edit book step.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteBook"></a>
+                    <span class="name">
+                        <span ><b>deleteBook</b></span>
+                        <a href="#deleteBook"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteBook(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="54"
+                            class="link-to-prism">src/app/books/books.component.ts:54</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to delete book as per the selection made by user.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editBook"></a>
+                    <span class="name">
+                        <span ><b>editBook</b></span>
+                        <a href="#editBook"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editBook(index: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="61"
+                            class="link-to-prism">src/app/books/books.component.ts:61</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to edit book as per the selection made by user.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>index</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getBooksData"></a>
+                    <span class="name">
+                        <span ><b>getBooksData</b></span>
+                        <a href="#getBooksData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getBooksData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app/books/books.component.ts:30</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the books details</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="23"
+                            class="link-to-prism">src/app/books/books.component.ts:23</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="saveEdit"></a>
+                    <span class="name">
+                        <span ><b>saveEdit</b></span>
+                        <a href="#saveEdit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>saveEdit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/books/books.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Method to save the edited book as per the user inputs.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="booksList"></a>
+                    <span class="name">
+                        <span ><b>booksList</b></span>
+                        <a href="#booksList"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Book.html" target="_self" >Book[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/books/books.component.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="data"></a>
+                    <span class="name">
+                        <span ><b>data</b></span>
+                        <a href="#data"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/books/books.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editedBook"></a>
+                    <span class="name">
+                        <span ><b>editedBook</b></span>
+                        <a href="#editedBook"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/books/books.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editingIndex"></a>
+                    <span class="name">
+                        <span ><b>editingIndex</b></span>
+                        <a href="#editingIndex"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/books/books.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortType"></a>
+                    <span class="name">
+                        <span ><b>sortType</b></span>
+                        <a href="#sortType"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/books/books.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+import {Book} from &quot;../modal/Book&quot;;
+import {BooksService} from &quot;./books.service&quot;;
+import {SortBooksPipe} from &quot;./sort-books.pipe&quot;;
+
+@Component({
+  selector: &#x27;app-books&#x27;,
+  templateUrl: &#x27;./books.component.html&#x27;,
+  styleUrls: [&#x27;./books.component.scss&#x27;],
+  providers: [SortBooksPipe]
+})
+export class BooksComponent implements OnInit {
+
+  data: any;
+  booksList: Book[] &#x3D; [];
+  sortType &#x3D; &#x27;&#x27;;
+  editingIndex: any &#x3D; null;
+  editedBook!: any;
+
+  constructor(private booksService: BooksService) {
+  }
+
+  ngOnInit() {
+    this.getBooksData();
+  }
+
+  /**
+   * Get the books details
+   */
+  getBooksData() {
+    this.booksService.getBooksData().subscribe((response: any) &#x3D;&gt; {
+      this.data &#x3D; response.data;
+      this.booksList &#x3D; this.data.books;
+      console.log(this.data);
+    });
+  }
+
+  /**
+   * Method to add book to the existing list.
+   */
+  addBook() {
+    const newBook &#x3D; {
+      &quot;imageUrl&quot;: &quot;https://m.media-amazon.com/images/I/91I2ywLs1YL.jpg&quot;,
+      &quot;title&quot;: &quot;New Book&quot;,
+      &quot;PublishDate&quot;: &quot;2022&quot;,
+      &quot;purchaseLink&quot;: &quot;https://www.amazon.com/BFG-Roald-Dahl/dp/0142410381/&quot;
+    };
+    this.booksList.push(newBook);
+  }
+
+  /**
+   * Method to delete book as per the selection made by user.
+   */
+  deleteBook(index: number) {
+    this.booksList.splice(index, 1);
+  }
+
+  /**
+   * Method to edit book as per the selection made by user.
+   */
+  editBook(index: number) {
+    this.editingIndex &#x3D; index;
+    this.editedBook &#x3D; {...this.booksList[index]};
+  }
+
+  /**
+   * Method to cancel edit book step.
+   */
+  cancelEdit() {
+    this.editingIndex &#x3D; null;
+    this.editedBook &#x3D; null;
+  }
+
+  /**
+   * Method to save the edited book as per the user inputs.
+   */
+  saveEdit() {
+    this.booksList[this.editingIndex] &#x3D; this.editedBook;
+    this.editingIndex &#x3D; null;
+    this.editedBook &#x3D; null;
+  }
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!--Author details--&gt;
+&lt;div class&#x3D;&quot;author-info&quot;&gt;
+  &lt;h2&gt;{{ data?.author }}&lt;/h2&gt;
+  &lt;p&gt;Birthday: {{ data?.birthday }}&lt;/p&gt;
+  &lt;p&gt;Place of birth: {{ data?.birthPlace }}&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!--Option to sort the list using book title or publish date--&gt;
+&lt;div *ngIf&#x3D;&quot;editingIndex &#x3D;&#x3D;&#x3D; null&quot; class&#x3D;&quot;action-buttons&quot;&gt;
+  &lt;button (click)&#x3D;&quot;addBook()&quot; mat-raised-button&gt;Add Book&lt;/button&gt;
+  &lt;button (click)&#x3D;&quot;sortType &#x3D; &#x27;title&#x27;;&quot; mat-raised-button&gt;Sort by Title&lt;/button&gt;
+  &lt;button (click)&#x3D;&quot;sortType &#x3D; &#x27;date&#x27;;&quot; mat-raised-button&gt;Sort by Date&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;!--List of books is shown with options to edit, add and delete.--&gt;
+&lt;div *ngIf&#x3D;&quot;editingIndex &#x3D;&#x3D;&#x3D; null&quot; class&#x3D;&quot;books-list&quot;&gt;
+  &lt;div *ngFor&#x3D;&quot;let book of (booksList | sortBooks: sortType); let i &#x3D; index;&quot; class&#x3D;&quot;book-item&quot;&gt;
+    &lt;img [alt]&#x3D;&quot;book?.title&quot; [src]&#x3D;&quot;book?.imageUrl&quot; class&#x3D;&quot;image-size&quot;&gt;
+    &lt;h3&gt;&lt;a [href]&#x3D;&quot;book?.purchaseLink&quot;&gt;{{ book?.title }}&lt;/a&gt;&lt;/h3&gt;
+    &lt;p&gt;Date published: {{ book.PublishDate }}&lt;/p&gt;
+    &lt;div class&#x3D;&quot;action-buttons&quot;&gt;
+      &lt;button (click)&#x3D;&quot;editBook(i)&quot; mat-raised-button&gt;Edit&lt;/button&gt;
+      &lt;button (click)&#x3D;&quot;deleteBook(i)&quot; mat-raised-button&gt;Delete&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!--This code is show the edit form when user selects any book to edit.--&gt;
+&lt;div *ngIf&#x3D;&quot;editingIndex !&#x3D;&#x3D; null&quot; class&#x3D;&quot;edit-book&quot;&gt;
+  &lt;h3&gt;Editing the Book&lt;/h3&gt;
+  &lt;input [(ngModel)]&#x3D;&quot;editedBook.imageUrl&quot; placeholder&#x3D;&quot;Image URL&quot; type&#x3D;&quot;text&quot;&gt;
+  &lt;input [(ngModel)]&#x3D;&quot;editedBook.title&quot; placeholder&#x3D;&quot;Title&quot; type&#x3D;&quot;text&quot;&gt;
+  &lt;input [(ngModel)]&#x3D;&quot;editedBook.PublishDate&quot; placeholder&#x3D;&quot;Publish Date&quot; type&#x3D;&quot;text&quot;&gt;
+  &lt;input [(ngModel)]&#x3D;&quot;editedBook.purchaseLink&quot; placeholder&#x3D;&quot;Purchase URL&quot; type&#x3D;&quot;text&quot;&gt;
+  &lt;div&gt;
+    &lt;button (click)&#x3D;&quot;saveEdit()&quot; mat-raised-button&gt;Save&lt;/button&gt;
+    &lt;button (click)&#x3D;&quot;cancelEdit()&quot; mat-raised-button&gt;Cancel&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./books.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.image-size {
+  height: 285px;
+  width: 175px;
+}
+
+.author-info {
+  text-align: center;
+}
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.books-list .book-item {
+  width: calc(50% - 10px);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .books-list .book-item {
+    width: 100%;
+  }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px 10px auto;
+}
+
+.action-buttons button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.action-buttons button:hover {
+  background-color: #3e8e41;
+}
+
+.edit-book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.edit-book input {
+  width: 50%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-book button {
+  margin: 10px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!--Author details--><div class="author-info">  <h2>{{ data?.author }}</h2>  <p>Birthday: {{ data?.birthday }}</p>  <p>Place of birth: {{ data?.birthPlace }}</p></div><!--Option to sort the list using book title or publish date--><div *ngIf="editingIndex === null" class="action-buttons">  <button (click)="addBook()" mat-raised-button>Add Book</button>  <button (click)="sortType = \'title\';" mat-raised-button>Sort by Title</button>  <button (click)="sortType = \'date\';" mat-raised-button>Sort by Date</button></div><!--List of books is shown with options to edit, add and delete.--><div *ngIf="editingIndex === null" class="books-list">  <div *ngFor="let book of (booksList | sortBooks: sortType); let i = index;" class="book-item">    <img [alt]="book?.title" [src]="book?.imageUrl" class="image-size">    <h3><a [href]="book?.purchaseLink">{{ book?.title }}</a></h3>    <p>Date published: {{ book.PublishDate }}</p>    <div class="action-buttons">      <button (click)="editBook(i)" mat-raised-button>Edit</button>      <button (click)="deleteBook(i)" mat-raised-button>Delete</button>    </div>  </div></div><!--This code is show the edit form when user selects any book to edit.--><div *ngIf="editingIndex !== null" class="edit-book">  <h3>Editing the Book</h3>  <input [(ngModel)]="editedBook.imageUrl" placeholder="Image URL" type="text">  <input [(ngModel)]="editedBook.title" placeholder="Title" type="text">  <input [(ngModel)]="editedBook.PublishDate" placeholder="Publish Date" type="text">  <input [(ngModel)]="editedBook.purchaseLink" placeholder="Purchase URL" type="text">  <div>    <button (click)="saveEdit()" mat-raised-button>Save</button>    <button (click)="cancelEdit()" mat-raised-button>Cancel</button>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BooksComponent', 'selector': 'app-books'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'BooksComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BooksComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
