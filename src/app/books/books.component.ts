@@ -1,17 +1,19 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from "../modal/Book";
 import {BooksService} from "./books.service";
+import {SortBooksPipe} from "./sort-books.pipe";
 
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
-  styleUrls: ['./books.component.scss']
+  styleUrls: ['./books.component.scss'],
+  providers: [SortBooksPipe]
 })
 export class BooksComponent implements OnInit {
 
   data: any;
   booksList: Book[] = [];
-  sortType: string = '';
+  sortType = '';
   editingIndex: any = null;
   editedBook!: any;
 
@@ -37,16 +39,16 @@ export class BooksComponent implements OnInit {
       "PublishDate": "2022",
       "purchaseLink": "https://www.amazon.com/BFG-Roald-Dahl/dp/0142410381/"
     };
-    this.data.books.push(newBook);
+    this.booksList.push(newBook);
   }
 
   deleteBook(index: number) {
-    this.data.books.splice(index, 1);
+    this.booksList.splice(index, 1);
   }
 
   editBook(index: number) {
     this.editingIndex = index;
-    this.editedBook = {...this.data.books[index]};
+    this.editedBook = {...this.booksList[index]};
   }
 
   cancelEdit() {
@@ -55,7 +57,7 @@ export class BooksComponent implements OnInit {
   }
 
   saveEdit() {
-    this.data.books[this.editingIndex] = this.editedBook;
+    this.booksList[this.editingIndex] = this.editedBook;
     this.editingIndex = null;
     this.editedBook = null;
   }
