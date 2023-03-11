@@ -1,15 +1,18 @@
+<!--Author details-->
 <div class="author-info">
   <h2>{{ data?.author }}</h2>
   <p>Birthday: {{ data?.birthday }}</p>
   <p>Place of birth: {{ data?.birthPlace }}</p>
 </div>
 
+<!--Option to sort the list using book title or publish date-->
 <div *ngIf="editingIndex === null" class="action-buttons">
   <button (click)="addBook()" mat-raised-button>Add Book</button>
   <button (click)="sortType = 'title';" mat-raised-button>Sort by Title</button>
   <button (click)="sortType = 'date';" mat-raised-button>Sort by Date</button>
 </div>
 
+<!--List of books is shown with options to edit, add and delete.-->
 <div *ngIf="editingIndex === null" class="books-list">
   <div *ngFor="let book of (booksList | sortBooks: sortType); let i = index;" class="book-item">
     <img [alt]="book?.title" [src]="book?.imageUrl" class="image-size">
@@ -21,6 +24,8 @@
     </div>
   </div>
 </div>
+
+<!--This code is show the edit form when user selects any book to edit.-->
 <div *ngIf="editingIndex !== null" class="edit-book">
   <h3>Editing the Book</h3>
   <input [(ngModel)]="editedBook.imageUrl" placeholder="Image URL" type="text">

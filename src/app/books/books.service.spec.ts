@@ -26,8 +26,8 @@ describe('BooksService', () => {
 
   it('should retrieve books data from endpoint', () => {
     const mockData = [
-      { title: 'Book A', PublishDate: '2021' },
-      { title: 'Book B', PublishDate: '2021' }
+      {title: 'Book A', PublishDate: '2021'},
+      {title: 'Book B', PublishDate: '2021'}
     ];
 
     service.getBooksData().subscribe(data => {

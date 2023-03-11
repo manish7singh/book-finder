@@ -96,7 +96,7 @@ describe('BooksComponent', () => {
   });
 
   it('should fetch books data on initialization', () => {
-    spyOn(booksService, 'getBooksData').and.returnValue(of({ data: { books: mockBooks } }));
+    spyOn(booksService, 'getBooksData').and.returnValue(of({data: {books: mockBooks}}));
     component.ngOnInit();
     expect(component.booksList).toEqual(mockBooks);
   });

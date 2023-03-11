@@ -24,6 +24,9 @@ export class BooksComponent implements OnInit {
     this.getBooksData();
   }
 
+  /**
+   * Get the books details
+   */
   getBooksData() {
     this.booksService.getBooksData().subscribe((response: any) => {
       this.data = response.data;
@@ -32,6 +35,9 @@ export class BooksComponent implements OnInit {
     });
   }
 
+  /**
+   * Method to add book to the exiting list
+   */
   addBook() {
     const newBook = {
       "imageUrl": "https://m.media-amazon.com/images/I/91I2ywLs1YL.jpg",
@@ -42,20 +48,32 @@ export class BooksComponent implements OnInit {
     this.booksList.push(newBook);
   }
 
+  /**
+   * Method to delete book as per the selection made by user.
+   */
   deleteBook(index: number) {
     this.booksList.splice(index, 1);
   }
 
+  /**
+   * Method to edit book as per the selection made by user.
+   */
   editBook(index: number) {
     this.editingIndex = index;
     this.editedBook = {...this.booksList[index]};
   }
 
+  /**
+   * Method to cancel edit book step.
+   */
   cancelEdit() {
     this.editingIndex = null;
     this.editedBook = null;
   }
 
+  /**
+   * Method to save the edited book as per the user inputs.
+   */
   saveEdit() {
     this.booksList[this.editingIndex] = this.editedBook;
     this.editingIndex = null;
