@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
+## Clone and install dependencies
+
+Clone the repository. Then run `npm install` to install the required dependencies. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you
@@ -26,6 +30,12 @@ Available under the documentation folder: documentation/index.html
 ## Code coverage report
 
 Available under the coverage folder: coverage/book-finder/index.html
+
+## Reason for framework selection
+
+Angular is a robust framework that offers comprehensive features, strong typing, performance optimizations, and good documentation.
+It has a large community of developers who provide support and create libraries and tools. 
+These factors make Angular a solid choice for building complex and scalable web applications.
 
 ## Further help
 
